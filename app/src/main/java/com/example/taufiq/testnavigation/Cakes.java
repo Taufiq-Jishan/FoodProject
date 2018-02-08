@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Chinese.OnFragmentInteractionListener} interface
+ * {@link Cakes.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Chinese#newInstance} factory method to
+ * Use the {@link Cakes#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Chinese extends Fragment {
+public class Cakes extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class Chinese extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Chinese() {
+    public Cakes() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class Chinese extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Chinese.
+     * @return A new instance of fragment Cakes.
      */
     // TODO: Rename and change types and number of parameters
-    public static Chinese newInstance(String param1, String param2) {
-        Chinese fragment = new Chinese();
+    public static Cakes newInstance(String param1, String param2) {
+        Cakes fragment = new Cakes();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,8 +64,8 @@ public class Chinese extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        getActivity().setTitle(getResources().getString(R.string.chinese));
-        return inflater.inflate(R.layout.fragment_chinese, container, false);
+        getActivity().setTitle(getResources().getString(R.string.cake));
+        return inflater.inflate(R.layout.fragment_cakes, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
