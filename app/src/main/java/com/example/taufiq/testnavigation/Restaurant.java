@@ -64,7 +64,7 @@ public class Restaurant extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        getActivity().setTitle("Restaurants");
+        getActivity().setTitle(getResources().getString(R.string.res));
         return inflater.inflate(R.layout.fragment_restaurant, container, false);
     }
 
