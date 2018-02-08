@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -125,13 +125,22 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Fragment fragment = null;
+        FragmentManager fragmentManager = getSupportFragmentManager();
         if (id == R.id.nav_res) {
-            // Handle the camera action
             navigationView.setCheckedItem(R.id.nav_res);
             Restaurant restaurant= new Restaurant();
-            getSupportFragmentManager().beginTransaction()
-                    .setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
-                    .replace(R.id.main_frame,restaurant).addToBackStack("Restaurants").commit();
+
+            //Change is here
+            if(fragmentManager.findFragmentById(R.id.nav_res)!=null){
+                fragmentManager.beginTransaction()
+                        .setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
+                        .show(fragmentManager.findFragmentById(R.id.nav_res)).commit();
+            }
+            else{
+                getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
+                        .replace(R.id.main_frame,restaurant).addToBackStack(getResources().getString(R.string.res)).commit();
+            }
         } else if (id == R.id.nav_chinese) {
             navigationView.setCheckedItem(R.id.nav_chinese);
             Chinese chinese = new Chinese();
