@@ -7,22 +7,22 @@
         <item
             android:id="@+id/nav_res"
             android:icon="@drawable/res"
-            android:title="Restaurants" />
+            android:title="@string/res" />
         <item
             android:id="@+id/nav_chinese"
             android:icon="@drawable/chinese_res"
-            android:title="Chinese and Thai" />
+            android:title="@string/chinese" />
         <item
             android:id="@+id/nav_meat"
             android:icon="@drawable/meat"
-            android:title="Meat Lover" />
+            android:title="@string/meat" />
         <item
             android:id="@+id/nav_cakes"
             android:icon="@drawable/cake"
-            android:title="Cakes and Pastry" />
+            android:title="@string/cake" />
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Settings" />
+            android:title="@string/settings" />
     </group>
 </menu>

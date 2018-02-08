@@ -12,4 +12,6 @@
     <string name="res">Restaurants</string>
     <string name="chinese">Chinese and Thai</string>
     <string name="meat">Meat Lover</string>
+    <string name="cake">Cakes and Pastry</string>
+    <string name="settings">Settings</string>
 </resources>
