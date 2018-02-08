@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_res"
+            android:icon="@drawable/res"
+            android:title="Restaurants" />
+        <item
+            android:id="@+id/nav_chinese"
+            android:icon="@drawable/chinese_res"
+            android:title="Chinese and Thai" />
+        <item
+            android:id="@+id/nav_meat"
+            android:icon="@drawable/meat"
+            android:title="Meat Lover" />
+        <item
+            android:id="@+id/nav_cakes"
+            android:icon="@drawable/cake"
+            android:title="Cakes and Pastry" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+    </group>
+</menu>
