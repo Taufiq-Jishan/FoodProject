@@ -206,7 +206,7 @@ public class MainActivity extends AppCompatActivity
                     if (locationAccepted)
                         Toast.makeText(getApplicationContext(), "Location Accepted", Toast.LENGTH_LONG).show();
                     else {
-                        Toast.makeText(getApplicationContext(), "Permission Denied, You cannot access location data and camera.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Permission Denied, You cannot access location.", Toast.LENGTH_LONG).show();
 
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                             if (shouldShowRequestPermissionRationale(ACCESS_FINE_LOCATION)) {
@@ -236,7 +236,7 @@ public class MainActivity extends AppCompatActivity
         new AlertDialog.Builder(MainActivity.this)
                 .setMessage(message)
                 .setPositiveButton("OK", okListener)
-                .setNegativeButton("Cancel", null)
+                .setNegativeButton("CANCEL", null)
                 .create()
                 .show();
     }
