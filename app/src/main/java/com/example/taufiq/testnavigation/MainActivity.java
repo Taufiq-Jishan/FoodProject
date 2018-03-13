@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView;
         Boolean doubleBackToExitPressedOnce = false;
         private static final int PERMISSION_REQUEST_CODE = 200;
+        LocationFinder finder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity
         if(!checkPermission()){
             requestPermission();
         }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -64,6 +67,23 @@ public class MainActivity extends AppCompatActivity
 //        getSupportFragmentManager().beginTransaction()
 //                .add(R.id.main_frame, fragment)
 //                .commit();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        finder = new LocationFinder(MainActivity.this);
+        if(finder.canGetLocation()){
+            double latitude = finder.getLatitude();
+            double longitude = finder.getLongitude();
+
+            Toast.makeText(this, "Longitude: " + longitude + " Latitude: " + latitude,
+                    Toast.LENGTH_SHORT).show();
+
+        }else{
+            finder.showSettingsAlert();
+        }
     }
 
     @Override
